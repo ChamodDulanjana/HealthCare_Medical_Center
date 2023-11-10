@@ -1,0 +1,334 @@
+CREATE DATABASE Medical_Center;
+
+USE Medical_Center;
+
+CREATE TABLE user(
+	empId VARCHAR(10) NOT NULL,
+	role VARCHAR(15),	
+	userName VARCHAR(15),
+	passWord VARCHAR(15),
+	CONSTRAINT PRIMARY KEY (empId)
+);
+
+CREATE TABLE receptionist(
+	repId VARCHAR(10) NOT NULL,
+	name VARCHAR(30),
+	address VARCHAR(50),
+	gender ENUM('Male','Female'),
+	contact INT,
+	dob DATE,
+	CONSTRAINT PRIMARY KEY (repId)
+);
+
+CREATE TABLE patient(
+	patId VARCHAR(10) NOT NULL,
+	name VARCHAR(30),
+	address VARCHAR(50),
+	gender ENUM('Male','Female'),
+	contact INT,
+	dob DATE,
+	CONSTRAINT PRIMARY KEY (patId)
+);
+
+CREATE TABLE appointment(
+	appId VARCHAR(10) NOT NULL,
+	date DATE,
+	appType VARCHAR(30) NOT NULL,
+	test VARCHAR(10),
+	doctor VARCHAR(30),
+	chanTime VARCHAR(10),
+	chanDate DATE,
+	patId VARCHAR(10) NOT NULL,
+	repId VARCHAR(10) NOT NULL,
+	CONSTRAINT PRIMARY KEY (appId),
+	CONSTRAINT FOREIGN KEY(patId) REFERENCES patient(patId) 
+		on Delete Cascade on Update Cascade,
+	CONSTRAINT FOREIGN KEY(repId) REFERENCES receptionist(repId) 
+		on Delete Cascade on Update Cascade
+);
+
+CREATE TABLE doctor(
+	docId VARCHAR(10) NOT NULL,
+	name VARCHAR(30),
+	specialty VARCHAR(30),
+	address VARCHAR(50),
+	gender ENUM('Male','Female'),
+	contact INT,
+	dob DATE,
+	CONSTRAINT PRIMARY KEY (docId)
+);
+
+CREATE TABLE nurse(
+	nurId VARCHAR(10) NOT NULL,
+	name VARCHAR(30),
+	address VARCHAR(50),
+	gender ENUM('Male','Female'),
+	contact INT,
+	dob DATE,
+	CONSTRAINT PRIMARY KEY (nurId)
+);
+
+CREATE TABLE payment(
+	payId VARCHAR(10) NOT NULL,
+	date DATE,
+	patId VARCHAR(10) NOT NULL,
+	nurId VARCHAR(10) NOT NULL,
+	CONSTRAINT PRIMARY KEY (payId),
+	CONSTRAINT FOREIGN KEY(nurId) REFERENCES nurse(nurId) 
+		on Delete Cascade on Update Cascade
+);
+
+CREATE TABLE medicine_store(
+	code VARCHAR(10) NOT NULL,
+	description VARCHAR(50),
+	company VARCHAR(100),
+	mg VARCHAR(10),
+	unitPrice DECIMAL(8,2),
+	qtyOnHand INT(5),
+	CONSTRAINT PRIMARY KEY (code)
+);
+
+CREATE TABLE payment_detail(
+	payId VARCHAR(10) NOT NULL,
+	code VARCHAR(10) NOT NULL,
+	qty INT(10),
+	unitPrice DECIMAL(8,2),
+	CONSTRAINT PRIMARY KEY (payId,code),
+	CONSTRAINT FOREIGN KEY (payId) REFERENCES payment(payId)
+		 on Delete Cascade on Update Cascade,
+	CONSTRAINT FOREIGN KEY (code) REFERENCES medicine_store(code)
+		 on Delete Cascade on Update Cascade
+);
+
+
+CREATE TABLE supplier(
+	supId VARCHAR(10) NOT NULL,
+	name VARCHAR(30),
+	company VARCHAR(100),
+	address VARCHAR(50),
+	gender ENUM('Male','Female'),
+	contact INT,
+	CONSTRAINT PRIMARY KEY (supId)
+);
+
+CREATE TABLE medicinePayment(
+	medicinePayId VARCHAR(10) NOT NULL,
+	date DATE,
+	supId VARCHAR(10) NOT NULL,
+	CONSTRAINT PRIMARY KEY (medicinePayId),
+	CONSTRAINT FOREIGN KEY (supId) REFERENCES supplier(supId)
+		 on Delete Cascade on Update Cascade
+	
+);
+
+CREATE TABLE medicinePayment_detail(
+	medicinePayId VARCHAR(10) NOT NULL,
+	code VARCHAR(10) NOT NULL,
+	qty INT(10),
+	unitPrice DECIMAL(8,2),
+	CONSTRAINT PRIMARY KEY (medicinePayId,code),
+	CONSTRAINT FOREIGN KEY (medicinePayId) REFERENCES medicinePayment(medicinePayId)
+		 on Delete Cascade on Update Cascade,
+	CONSTRAINT FOREIGN KEY (code) REFERENCES medicine_store(code)
+		 on Delete Cascade on Update Cascade
+);
+
+CREATE TABLE test(
+	testId VARCHAR(10) NOT NULL,
+	description VARCHAR(50),
+	fee DECIMAL(8,2),
+	payId VARCHAR(10) NOT NULL,
+	CONSTRAINT PRIMARY KEY (testId),
+	CONSTRAINT FOREIGN KEY(payId) REFERENCES payment(payId) 
+		on Delete Cascade on Update Cascade
+);
+
+CREATE TABLE income(
+	payId VARCHAR(10) NOT NULL,
+	date VARCHAR(2),
+	month VARCHAR(2),
+	year VARCHAR(4),
+	amount DECIMAL(12,2),
+	CONSTRAINT PRIMARY KEY (payId)
+);
+
+CREATE TABLE medicine_expenses(
+	medicinePayId VARCHAR(10) NOT NULL,
+	date DATE,
+	amount DECIMAL(15,2),
+	CONSTRAINT PRIMARY KEY (medicinePayId)
+);
+
+
+//----------------------------User------------------------------------------
+
+INSERT INTO user VALUES('A001','admin','admin01','admin01234');
+INSERT INTO user VALUES('N001','nurse','nurse01','nurse01234');
+INSERT INTO user VALUES('N002','nurse','nurse02','nurse02345');
+//INSERT INTO user VALUES('N003','nurse','nurse03','nurse03456');
+INSERT INTO user VALUES('R001','receptionist','rep01','rep01234');
+INSERT INTO user VALUES('R002','receptionist','rep02','rep02345');
+//INSERT INTO user VALUES('R003','receptionist','rep03','rep03456');
+
+//----------------------------Receptionist------------------------------------------
+
+INSERT INTO receptionist VALUES('R001','Nimsara','Kandy','Male',0775698159,'2000/5/28');
+INSERT INTO receptionist VALUES('R002','Ranasinghe','Galle','Male',0767412321,'1999/8/12');
+INSERT INTO receptionist VALUES('R003','Kumara','Nuwara','Male',0724527841,'1995/2/18');
+INSERT INTO receptionist VALUES('R004','Apsara','Kandy','Female',0754545641,'1996/2/26');
+
+//--------------------------------Nurse------------------------------------------
+
+INSERT INTO nurse VALUES('N001','Kavindi','Kaluthara','Female',0715612153,'2001/10/21');
+INSERT INTO nurse VALUES('N002','Isuri','Gampaha','Female',0764585214,'2002/1/15');
+INSERT INTO nurse VALUES('N003','Madhawi','Monaragala','Female',0754873646,'2000/7/15');
+INSERT INTO nurse VALUES('N004','Kaweesha','Ingiriya','Female',0775623256,'2001/4/02');
+
+//--------------------------------Doctor------------------------------------------
+
+INSERT INTO doctor VALUES('D001','Dr.Sugath Hewage','surgeon','Panadura','Male',0714587770,'1994/3/19');
+INSERT INTO doctor VALUES('D002','Dr.Ramesh Pathirana','Radiologist','Kaduwella','Male',0774679135,'1993/9/8');
+INSERT INTO doctor VALUES('D003','Dr.Kalhari Pathiraja','Neurologist','Rathnapura','Female',0767845123,'1994/7/30');
+INSERT INTO doctor VALUES('D004','Dr.Nisal Perera','Dermatologist','Kaluthara','Male',0724563281,'1996/1/1');
+INSERT INTO doctor VALUES('D005','Dr.Hasika Silva','Cardiologist','Minuwangoda','Male',0704712586,'1992/12/12');
+
+//--------------------------------Patient------------------------------------------
+
+INSERT INTO patient VALUES('P001','Nisali Perera','Rathmalana','Female',0714587770,'1994/5/22');
+INSERT INTO patient VALUES('P002','Priyamantha Dilshan','Baththaramulla','Male',0702589641,'1990/11/22');
+INSERT INTO patient VALUES('P003','Nipuni Nimansa','Kalubowilla','Female',0714584169,'1996/8/8');
+INSERT INTO patient VALUES('P004','Kalana Gihan','Nugegoda','Male',0714587952,'2000/4/16');
+
+//--------------------------------Appointment------------------------------------------
+
+INSERT INTO appointment VALUES('A001','2022/10/20','Channeling','-','Dr.Ramesh Pathirana','08:00','2022/10/20','P002','R001');
+INSERT INTO appointment VALUES('A002','2022/10/20','Channeling','-','Dr.Kalhari Pathiraja','08:20','2022/10/20','P001','R003');
+INSERT INTO appointment VALUES('A003','2022/10/21','Testing','Blood','Dr.Hasika Silva','07:20','2022/10/25','P004','R001');
+INSERT INTO appointment VALUES('A004','2022/10/22','Testing','Urine','Dr.Sugath Hewage','07:00','2022/10/29','P003','R002');
+
+//--------------------------------Medicine_Store----------------------------------------
+
+INSERT INTO medicine_store VALUES('M001','Amoxicillin 250','USV Private Company','250mg',14.00,500);
+INSERT INTO medicine_store VALUES('M002','Piriton 2','Glycomate.Ltd','2mg',10.00,400);
+INSERT INTO medicine_store VALUES('M003','Erythromycin 500','CIPAL ltd.','500mg',12.00,650);
+INSERT INTO medicine_store VALUES('M004','Domperidone 10','TORRENT Pharmaceuticals.ltd.','10mg',15.00,720);
+INSERT INTO medicine_store VALUES('M005','Zycopane 50','CADILA Healthcare.Ltd.','50mg',18.00,1000);
+INSERT INTO medicine_store VALUES('M006','Atorlip 20','CIPAL ltd.','20mg',20.00,1500);
+INSERT INTO medicine_store VALUES('M007','Digene 300','Abbott India.ltd.','300mg',10.00,1200);
+INSERT INTO medicine_store VALUES('M008','Zycopane 100','CADILA Healthcare.Ltd.','100mg',30.00,1200);
+INSERT INTO medicine_store VALUES('M009','Amoxicillin 500','Aclips Company','500mg',25.00,700);
+INSERT INTO medicine_store VALUES('M0010','Atorlip 100','CIPAL ltd.','100mg',30.00,1250);
+
+//--------------------------------Payment---------------------------------------------
+
+INSERT INTO payment VALUES('Pay001','2022/10/20','P002','N002');
+INSERT INTO payment VALUES('Pay002','2022/10/20','P001','N003');
+INSERT INTO payment VALUES('Pay003','2022/10/25','P004','N001');
+INSERT INTO payment VALUES('Pay004','2022/10/29','P003','N002');
+INSERT INTO payment VALUES('Pay005','2022/11/01','P001','N004');
+INSERT INTO payment VALUES('Pay006','2022/11/02','P003','N004');
+
+//--------------------------------Payment_Detail--------------------------------------
+
+INSERT INTO payment_detail VALUES('Pay001','M002','8','10.00');
+INSERT INTO payment_detail VALUES('Pay001','M007','11','10.00');
+INSERT INTO payment_detail VALUES('Pay001','M003','7','12.00');
+INSERT INTO payment_detail VALUES('Pay002','M001','5','14.00');
+INSERT INTO payment_detail VALUES('Pay002','M006','16','20.00');
+INSERT INTO payment_detail VALUES('Pay003','M004','10','15.00');
+INSERT INTO payment_detail VALUES('Pay003','M007','15','10.00');
+INSERT INTO payment_detail VALUES('Pay003','M003','8','12.00');
+INSERT INTO payment_detail VALUES('Pay004','M001','6','14.00');
+INSERT INTO payment_detail VALUES('Pay004','M002','20','10.00');
+INSERT INTO payment_detail VALUES('Pay004','M005','14','18.00');
+
+//--------------------------------Supplier--------------------------------------------
+
+INSERT INTO supplier VALUES('S001','Kavindi','Dermalife (Pvt)Ltd','Panadura','Female',0715612153);
+INSERT INTO supplier VALUES('S002','Shashika','Mega Pharma (Pvt)Ltd','Rathmalana','Male',0704712581);
+INSERT INTO supplier VALUES('S003','Chamath','Meditechnology Holdings (Pvt)Ltd','Gampaha','Male',0714587778);
+INSERT INTO supplier VALUES('S004','Hansa','Mediccom Group (Pvt)Ltd','Galle','Male',0754873645);
+
+//--------------------------------medicinePayment--------------------------------------
+
+INSERT INTO medicinePayment VALUES('MPI001','2022/10/12','S001');
+INSERT INTO medicinePayment VALUES('MPI002','2022/10/15','S001');
+INSERT INTO medicinePayment VALUES('MPI003','2022/10/19','S002');
+INSERT INTO medicinePayment VALUES('MPI004','2022/10/22','S002');
+INSERT INTO medicinePayment VALUES('MPI005','2022/10/28','S003');
+INSERT INTO medicinePayment VALUES('MPI006','2022/10/30','S003');
+
+
+//--------------------------------medicinePayment_detail--------------------------------------
+
+INSERT INTO medicinePayment_detail VALUES('MPI001','M002','300','10.00');
+INSERT INTO medicinePayment_detail VALUES('MPI002','M005','450','18.00');
+INSERT INTO medicinePayment_detail VALUES('MPI003','M005','300','18.00');
+INSERT INTO medicinePayment_detail VALUES('MPI004','M007','600','10.00');
+INSERT INTO medicinePayment_detail VALUES('MPI005','M003','500','12.00');
+INSERT INTO medicinePayment_detail VALUES('MPI006','M001','500','14.00');
+
+
+//--------------------------------Test--------------------------------------------
+
+INSERT INTO test VALUES('T001','blood test','500.00','Pay005');
+INSERT INTO test VALUES('T002','urine test','650.00','Pay006');
+
+//--------------------------------Income--------------------------------------------
+
+INSERT INTO income VALUES('Pay001','20','10','2022','1000.00');
+INSERT INTO income VALUES('Pay002','20','10','2022','950.00');
+
+//--------------------------------medicine_expenses--------------------------------------------
+
+INSERT INTO medicine_expenses VALUES('MPI005','2022/10/28','6000.00');
+INSERT INTO medicine_expenses VALUES('MPI006','2022/10/30','7000.00');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+try {
+            String name  = PatientModel.searchPatientUsingContact(txtContactNo.getText());
+
+            if (name==null){
+                btnEnter.setOnAction((e) -> {
+                    ButtonType ok = new ButtonType("Add Patient", ButtonBar.ButtonData.OK_DONE);
+
+                    Alert alert = new Alert(Alert.AlertType.CONFIRMATION, "Are You Sure ?", ok);
+                    Optional<ButtonType> result = alert.showAndWait();
+                    if (result.orElse(ok) == ok) {
+                        System.out.println("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
+                    }
+                });
+            }else {
+                txtPatientName.setText(name);
+            }
+        } catch (SQLException | ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+
+
+
+
+
+
+
+

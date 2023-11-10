@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="pane" prefHeight="718.0" prefWidth="782.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.medicalcenter.controller.ViewDetailFormController">
+   <children>
+      <ImageView fitHeight="718.0" fitWidth="782.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/img/test01.jpg" />
+         </image>
+      </ImageView>
+      <AnchorPane opacity="0.33" prefHeight="718.0" prefWidth="782.0" style="-fx-background-color: #40739e;" />
+      <JFXComboBox fx:id="cmbRole" layoutX="24.0" layoutY="98.0" onAction="#cmbRoleOnAction" prefHeight="25.0" prefWidth="269.0" promptText="Setect The Role" />
+      <TableView fx:id="tblPRN" layoutX="5.0" layoutY="157.0" prefHeight="551.0" prefWidth="768.0" style="-fx-effect: dropshadow(three-pass-box, grey, 16,0, 0, 0);">
+        <columns>
+          <TableColumn fx:id="colId" prefWidth="95.00003051757812" text="Id" />
+          <TableColumn fx:id="colName" prefWidth="201.0" text="Name" />
+            <TableColumn fx:id="colAddress" prefWidth="148.0" text="Address" />
+            <TableColumn fx:id="colGender" prefWidth="108.0" text="Gender" />
+            <TableColumn fx:id="colContact" prefWidth="111.0" text="Contact" />
+            <TableColumn fx:id="colDob" prefWidth="103.0" text="Date Of Birth" />
+        </columns>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </TableView>
+      <Text fill="#172a51" layoutX="200.0" layoutY="59.0" strokeType="OUTSIDE" strokeWidth="0.0" text="View Detail Form" textAlignment="CENTER" wrappingWidth="382.646484375">
+         <font>
+            <Font name="Eras Demi ITC" size="32.0" />
+         </font>
+      </Text>
+      <TableView fx:id="tblSupplier" layoutX="5.0" layoutY="157.0" prefHeight="551.0" prefWidth="768.0" style="-fx-effect: dropshadow(three-pass-box, grey, 16,0, 0, 0);">
+         <columns>
+            <TableColumn fx:id="colSupId" prefWidth="83.0" text="Id" />
+            <TableColumn fx:id="colSupName" prefWidth="164.0" text="Name" />
+            <TableColumn fx:id="colSupCompany" prefWidth="201.0" text="Company" />
+            <TableColumn fx:id="colSupAddress" prefWidth="121.0" text="Address" />
+            <TableColumn fx:id="colSupGender" prefWidth="99.0" text="Gender" />
+            <TableColumn fx:id="colSupContact" prefWidth="99.0" text="Contact" />
+            <TableColumn fx:id="colAddress11" prefWidth="148.0" text="Address" />
+         </columns>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </TableView>
+      <TableView fx:id="tblDoctor" layoutX="5.0" layoutY="157.0" prefHeight="551.0" prefWidth="768.0" style="-fx-effect: dropshadow(three-pass-box, grey, 16,0, 0, 0);">
+         <columns>
+            <TableColumn fx:id="colDocId" prefWidth="62.0" text="Id" />
+            <TableColumn fx:id="colDocName" prefWidth="170.0" text="Name" />
+            <TableColumn fx:id="colDocSpecialty" prefWidth="115.0" text="Specialty " />
+            <TableColumn fx:id="colDocAddress" prefWidth="121.0" text="Address" />
+            <TableColumn fx:id="colDocGender" prefWidth="87.0" text="Gender" />
+            <TableColumn fx:id="colDocContact" prefWidth="108.0" text="Contact" />
+            <TableColumn fx:id="colDocDob" prefWidth="104.0" text="Date Of Birth" />
+         </columns>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </TableView>
+   </children>
+</AnchorPane>

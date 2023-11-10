@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="pane" prefHeight="718.0" prefWidth="1077.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.medicalcenter.controller.AppoForChannelingController">
+   <children>
+      <Text fill="#172a51" layoutX="347.0" layoutY="59.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Make an Appointment" textAlignment="CENTER" wrappingWidth="382.646484375">
+         <font>
+            <Font name="Eras Demi ITC" size="32.0" />
+         </font>
+      </Text>
+      <Text fill="#636e72" layoutX="45.0" layoutY="124.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Appointment Id " wrappingWidth="150.13671875">
+         <font>
+            <Font name="Calibri" size="21.0" />
+         </font>
+      </Text>
+      <Text fill="#636e72" layoutX="221.0" layoutY="123.0" strokeType="OUTSIDE" strokeWidth="0.0" text=":" wrappingWidth="9.13671875">
+         <font>
+            <Font name="Calibri" size="21.0" />
+         </font>
+      </Text>
+      <Text fx:id="txtAppId" layoutX="254.0" layoutY="124.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="185.1367223262787">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Text>
+      <Text fill="#636e72" layoutX="737.0" layoutY="124.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Date :" wrappingWidth="62.13671875">
+         <font>
+            <Font name="Calibri" size="21.0" />
+         </font>
+      </Text>
+      <Text fx:id="txtDate" layoutX="811.0" layoutY="124.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="158.1367223262787">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Text>
+      <Text fill="#636e72" layoutX="45.0" layoutY="183.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Receptionist Id " wrappingWidth="139.13671875">
+         <font>
+            <Font name="Calibri" size="21.0" />
+         </font>
+      </Text>
+      <Text fill="#636e72" layoutX="221.0" layoutY="183.0" strokeType="OUTSIDE" strokeWidth="0.0" text=":" wrappingWidth="9.13671875">
+         <font>
+            <Font name="Calibri" size="21.0" />
+         </font>
+      </Text>
+      <Text fx:id="txtRepId" layoutX="254.0" layoutY="185.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="185.13672975450754">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Text>
+      <Text fill="#636e72" layoutX="45.0" layoutY="310.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Select The Doctor" wrappingWidth="158.13673648238182">
+         <font>
+            <Font name="Calibri" size="21.0" />
+         </font>
+      </Text>
+      <Text fill="#636e72" layoutX="221.0" layoutY="300.0" strokeType="OUTSIDE" strokeWidth="0.0" text=":" wrappingWidth="9.13671875">
+         <font>
+            <Font name="Calibri" size="21.0" />
+         </font>
+      </Text>
+      <JFXComboBox fx:id="cmbDoctor" layoutX="254.0" layoutY="290.0" onAction="#cmbDoctorOnAction" prefHeight="25.0" prefWidth="275.0" promptText="Doctors" />
+      <Text fill="#636e72" layoutX="592.0" layoutY="310.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Specialty" wrappingWidth="106.13673648238182">
+         <font>
+            <Font name="Calibri" size="21.0" />
+         </font>
+      </Text>
+      <Text fill="#636e72" layoutX="698.0" layoutY="308.0" strokeType="OUTSIDE" strokeWidth="0.0" text=":" wrappingWidth="9.13671875">
+         <font>
+            <Font name="Calibri" size="21.0" />
+         </font>
+      </Text>
+      <Text fill="#636e72" layoutX="42.0" layoutY="391.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Patient's Phone no" wrappingWidth="164.13673648238182">
+         <font>
+            <Font name="Calibri" size="21.0" />
+         </font>
+      </Text>
+      <Text fill="#636e72" layoutX="221.0" layoutY="389.0" strokeType="OUTSIDE" strokeWidth="0.0" text=":" wrappingWidth="9.13671875">
+         <font>
+            <Font name="Calibri" size="21.0" />
+         </font>
+      </Text>
+      <JFXTextField fx:id="txtPhoneNo" layoutX="254.0" layoutY="372.0" prefHeight="25.0" prefWidth="265.0" promptText="0XXXXXXXXX" />
+      <HBox alignment="BASELINE_CENTER" layoutX="254.0" layoutY="437.0" opacity="0.79" prefHeight="37.0" prefWidth="241.0" style="-fx-border-radius: 10; -fx-background-color: #ced6e0; -fx-background-radius: 10;">
+         <children>
+            <Text fx:id="txtPatientName" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="237.13672975450754">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Text>
+         </children>
+      </HBox>
+      <HBox layoutX="512.0" layoutY="437.0" opacity="0.75" prefHeight="37.0" prefWidth="241.0" style="-fx-border-radius: 10; -fx-background-color: #a4b0be; -fx-background-radius: 10;">
+         <children>
+            <Text fx:id="txtPatientAddress" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="237.13672975450754">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Text>
+         </children>
+      </HBox>
+      <HBox alignment="BASELINE_CENTER" layoutX="770.0" layoutY="437.0" opacity="0.97" prefHeight="37.0" prefWidth="241.0" style="-fx-border-radius: 10; -fx-background-color: #a4b0be; -fx-background-radius: 10;">
+         <children>
+            <Text fx:id="txtPatientDob" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="237.13672975450754">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Text>
+         </children>
+      </HBox>
+      <Text fill="#636e72" layoutX="42.0" layoutY="516.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Current Appointment Date" textAlignment="CENTER" wrappingWidth="185.13673777878284">
+         <font>
+            <Font name="Calibri" size="21.0" />
+         </font>
+      </Text>
+      <Text fill="#636e72" layoutX="42.0" layoutY="591.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Current Appointment Time" textAlignment="CENTER" wrappingWidth="184.99998807907104">
+         <font>
+            <Font name="Calibri" size="21.0" />
+         </font>
+      </Text>
+      <Text fill="#636e72" layoutX="236.0" layoutY="529.0" strokeType="OUTSIDE" strokeWidth="0.0" text=":" wrappingWidth="9.13671875">
+         <font>
+            <Font name="Calibri" size="21.0" />
+         </font>
+      </Text>
+      <Text fill="#636e72" layoutX="236.0" layoutY="607.0" strokeType="OUTSIDE" strokeWidth="0.0" text=":" wrappingWidth="9.13671875">
+         <font>
+            <Font name="Calibri" size="21.0" />
+         </font>
+      </Text>
+      <Text fill="#636e72" layoutX="44.0" layoutY="246.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Appointment Type" wrappingWidth="164.1367439031601">
+         <font>
+            <Font name="Calibri" size="21.0" />
+         </font>
+      </Text>
+      <Text fill="#636e72" layoutX="220.0" layoutY="243.0" strokeType="OUTSIDE" strokeWidth="0.0" text=":" wrappingWidth="9.13671875">
+         <font>
+            <Font name="Calibri" size="21.0" />
+         </font>
+      </Text>
+      <JFXComboBox fx:id="cmbAppType" layoutX="251.0" layoutY="226.0" onAction="#cmbAppTypeOnAction" prefHeight="25.0" prefWidth="275.0" promptText="Select The Appointment Type" />
+      <JFXTextField fx:id="txtSpecialty" layoutX="730.0" layoutY="291.0" prefHeight="25.0" prefWidth="275.0" />
+      <JFXButton fx:id="btnAppointment" buttonType="RAISED" layoutX="834.0" layoutY="643.0" onAction="#btnAddAppointmentOnAction" prefHeight="47.0" prefWidth="185.0" style="-fx-background-color: #273c75; -fx-background-radius: 10;" text="Add Apointment" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnEnter" buttonType="RAISED" layoutX="540.0" layoutY="371.0" onAction="#btnEnterOnAction" prefHeight="30.0" prefWidth="71.0" style="-fx-background-color: #079992; -fx-background-radius: 8;" text="Enter" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </JFXButton>
+      <Text fill="#636e72" layoutX="591.0" layoutY="248.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Test" wrappingWidth="106.13673648238182">
+         <font>
+            <Font name="Calibri" size="21.0" />
+         </font>
+      </Text>
+      <Text fill="#636e72" layoutX="698.0" layoutY="246.0" strokeType="OUTSIDE" strokeWidth="0.0" text=":" wrappingWidth="9.13671875">
+         <font>
+            <Font name="Calibri" size="21.0" />
+         </font>
+      </Text>
+      <JFXComboBox fx:id="cmbTest" layoutX="730.0" layoutY="229.0" onAction="#cmbDoctorOnAction" prefHeight="25.0" prefWidth="275.0" promptText="Boold / Urine" />
+      <Text fill="#636e72" layoutX="627.0" layoutY="537.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Channeling Date" wrappingWidth="158.13673648238182">
+         <font>
+            <Font name="Calibri" size="21.0" />
+         </font>
+      </Text>
+      <Text fill="#636e72" layoutX="627.0" layoutY="595.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Channeling Time" wrappingWidth="150.1367265880108">
+         <font>
+            <Font name="Calibri" size="21.0" />
+         </font>
+      </Text>
+      <Text fill="#636e72" layoutX="813.0" layoutY="535.0" strokeType="OUTSIDE" strokeWidth="0.0" text=":" wrappingWidth="9.13671875">
+         <font>
+            <Font name="Calibri" size="21.0" />
+         </font>
+      </Text>
+      <Text fill="#636e72" layoutX="813.0" layoutY="593.0" strokeType="OUTSIDE" strokeWidth="0.0" text=":" wrappingWidth="9.13671875">
+         <font>
+            <Font name="Calibri" size="21.0" />
+         </font>
+      </Text>
+      <Text fx:id="txtCurrentChannDate" layoutX="274.0" layoutY="534.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="164.1367439031601">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Text>
+      <Text fx:id="txtCurrentChannTime" layoutX="274.0" layoutY="609.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="164.1367519274354">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Text>
+      <JFXTextField fx:id="txtChannDate" layoutX="845.0" layoutY="518.0" prefHeight="25.0" prefWidth="164.0" promptText="YYYY / MM / DD" />
+      <JFXTextField fx:id="txtChannTime" layoutX="845.0" layoutY="576.0" prefHeight="25.0" prefWidth="164.0" promptText="HH : MM" />
+   </children>
+   <cursor>
+      <Cursor fx:constant="HAND" />
+   </cursor>
+</AnchorPane>

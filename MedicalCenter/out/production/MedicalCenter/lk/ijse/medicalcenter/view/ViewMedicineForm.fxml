@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="pane" prefHeight="718.0" prefWidth="782.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.medicalcenter.controller.ViewMedicineFormController">
+   <children>
+      <ImageView fitHeight="718.0" fitWidth="782.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/img/test01.jpg" />
+         </image>
+      </ImageView>
+      <AnchorPane opacity="0.33" prefHeight="718.0" prefWidth="782.0" style="-fx-background-color: #40739e;" />
+      <TableView fx:id="tblViewMedicine" layoutX="6.0" layoutY="158.0" prefHeight="538.0" prefWidth="770.0" style="-fx-effect: dropshadow(three-pass-box, grey, 16,0, 0, 0);">
+        <columns>
+          <TableColumn fx:id="colCode" prefWidth="92.0" text="Code" />
+          <TableColumn fx:id="colDescription" prefWidth="169.0" text="Description" />
+            <TableColumn fx:id="colCompany" prefWidth="190.0" text="Company" />
+            <TableColumn fx:id="colWeight" prefWidth="106.0" text="Weight" />
+            <TableColumn fx:id="colUnitPrice" prefWidth="115.0" text="Unit Price" />
+            <TableColumn fx:id="colQtyOnHand" prefWidth="97.0" text="QTY On Hand" />
+        </columns>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </TableView>
+      <Text fill="#172a51" layoutX="200.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="View Medicine Form" textAlignment="CENTER" wrappingWidth="382.646484375">
+         <font>
+            <Font name="Eras Demi ITC" size="32.0" />
+         </font>
+      </Text>
+      <JFXButton layoutX="602.0" layoutY="94.0" onAction="#btnGenerateReportOnAction" style="-fx-background-color: #0097e6; -fx-border-color: #273c75; -fx-background-radius: 8; -fx-border-radius: 8;" text="Generate Report" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

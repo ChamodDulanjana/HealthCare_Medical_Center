@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="718.0" prefWidth="1077.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.medicalcenter.controller.IssueBillsFormController">
+   <children>
+      <Text fill="#172a51" layoutX="347.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Make a Payment" textAlignment="CENTER" wrappingWidth="382.646484375">
+         <font>
+            <Font name="Eras Demi ITC" size="32.0" />
+         </font>
+      </Text>
+      <Text fill="#636e72" layoutX="36.0" layoutY="108.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Payment Id :" wrappingWidth="115.13671875">
+         <font>
+            <Font name="Calibri" size="21.0" />
+         </font>
+      </Text>
+      <Text fx:id="txtPayId" layoutX="163.0" layoutY="108.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ss" wrappingWidth="150.1367223262787">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Text>
+      <Text fill="#636e72" layoutX="796.0" layoutY="106.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Date :" wrappingWidth="53.13671875">
+         <font>
+            <Font name="Calibri" size="21.0" />
+         </font>
+      </Text>
+      <Text fx:id="txtDate" layoutX="859.0" layoutY="107.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ss" wrappingWidth="175.99999299645424">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Text>
+      <JFXComboBox fx:id="cmbDescription" layoutX="46.0" layoutY="252.0" onAction="#cmbDescriptionOnAction" prefHeight="25.0" prefWidth="210.0" promptText="Medicine Name" />
+      <Text fill="#636e72" layoutX="540.0" layoutY="232.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Unit Price" textAlignment="CENTER" wrappingWidth="93.00000368524343">
+         <font>
+            <Font name="Calibri" size="21.0" />
+         </font>
+      </Text>
+      <Text fill="#636e72" layoutX="721.0" layoutY="232.0" strokeType="OUTSIDE" strokeWidth="0.0" text="QTY On Hand" textAlignment="CENTER" wrappingWidth="150.13671875">
+         <font>
+            <Font name="Calibri" size="21.0" />
+         </font>
+      </Text>
+      <Text fx:id="txtQtyOnHand" layoutX="730.0" layoutY="284.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="132.13670432567596">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Text>
+      <Text fill="#636e72" layoutX="929.0" layoutY="232.0" strokeType="OUTSIDE" strokeWidth="0.0" text="QTY" textAlignment="CENTER" wrappingWidth="98.99997800588608">
+         <font>
+            <Font name="Calibri" size="21.0" />
+         </font>
+      </Text>
+      <TableView fx:id="tblPayment" layoutX="31.0" layoutY="380.0" prefHeight="224.0" prefWidth="1012.0">
+        <columns>
+          <TableColumn fx:id="colCode" prefWidth="145.0" text="Code" />
+          <TableColumn fx:id="colDescription" prefWidth="337.99998474121094" text="Description" />
+            <TableColumn fx:id="colWeight" prefWidth="108.0" text="mg" />
+            <TableColumn fx:id="colQty" prefWidth="136.0" text="QTY" />
+            <TableColumn fx:id="colUnitPrice" prefWidth="143.0" text="Unit Price" />
+            <TableColumn fx:id="colTotal" prefWidth="141.0" text="Total" />
+        </columns>
+      </TableView>
+      <Text fill="#c23616" layoutX="29.0" layoutY="664.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Net Total :" textAlignment="CENTER" wrappingWidth="150.13669449090958">
+         <font>
+            <Font name="Calibri" size="34.0" />
+         </font>
+      </Text>
+      <Text fx:id="txtNetTotal" layoutX="193.0" layoutY="666.0" strokeType="OUTSIDE" strokeWidth="0.0" text="00.0" wrappingWidth="240.1367143392563">
+         <font>
+            <Font size="34.0" />
+         </font>
+      </Text>
+      <TextField fx:id="txtQty" alignment="CENTER" layoutX="921.0" layoutY="262.0" prefHeight="29.0" prefWidth="115.0">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </TextField>
+      <Text fill="#636e72" layoutX="36.0" layoutY="150.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Contact No :" wrappingWidth="115.13669934868813">
+         <font>
+            <Font name="Calibri" size="21.0" />
+         </font>
+      </Text>
+      <Text fill="#636e72" layoutX="719.0" layoutY="150.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Patient Name :" wrappingWidth="132.13670432567596">
+         <font>
+            <Font name="Calibri" size="21.0" />
+         </font>
+      </Text>
+      <Text fx:id="txtPatientName" layoutX="859.0" layoutY="152.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="197.1367223262787">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Text>
+      <Text fx:id="txtUnitPrice" layoutX="520.0" layoutY="285.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="132.13670432567596">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Text>
+      <Text fill="#636e72" layoutX="37.0" layoutY="198.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nurse Id :" wrappingWidth="93.00000283122063">
+         <font>
+            <Font name="Calibri" size="21.0" />
+         </font>
+      </Text>
+      <Text fx:id="txtNurseId" layoutX="151.0" layoutY="199.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ss" wrappingWidth="167.99999513849616">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Text>
+      <JFXButton buttonType="RAISED" layoutX="831.0" layoutY="323.0" onAction="#btnAddToBillOnAction" prefHeight="33.0" prefWidth="97.0" style="-fx-background-color: #3498db;" text="Add to Bill" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnRemove" buttonType="RAISED" layoutX="958.0" layoutY="323.0" onAction="#btnRemoveOnAction" prefHeight="33.0" prefWidth="81.0" style="-fx-background-color: #e55039;" text="Remove" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnIsssueBill" buttonType="RAISED" layoutX="890.0" layoutY="634.0" onAction="#btnIssueBillOnAction" prefHeight="45.0" prefWidth="150.0" style="-fx-background-color: #079992;" text="Issue Bill" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </JFXButton>
+      <Text fill="#636e72" layoutX="349.0" layoutY="232.0" strokeType="OUTSIDE" strokeWidth="0.0" text="mg" textAlignment="CENTER" wrappingWidth="93.00000268220901">
+         <font>
+            <Font name="Calibri" size="21.0" />
+         </font>
+      </Text>
+      <Text fx:id="txtWeight" layoutX="338.0" layoutY="285.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="115.13669934868813">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Text>
+      <JFXButton fx:id="btnEnter" buttonType="RAISED" layoutX="372.0" layoutY="129.0" onAction="#btnEnterOnAction" prefHeight="33.0" prefWidth="81.0" style="-fx-background-color: #1e3799;" text="Enter" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </JFXButton>
+      <Text fx:id="txtQtyWarning" fill="#c23616" layoutX="938.0" layoutY="258.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Input a number" />
+      <JFXTextField fx:id="txtContactNo" layoutX="163.0" layoutY="133.0" prefHeight="25.0" prefWidth="185.0" promptText="0XXXXXXXX" />
+   </children>
+</AnchorPane>

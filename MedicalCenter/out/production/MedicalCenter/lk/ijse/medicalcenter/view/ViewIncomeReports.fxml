@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="718.0" prefWidth="1077.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.medicalcenter.controller.ViewIncomeReportsController">
+   <children>
+      <ImageView fitHeight="718.0" fitWidth="1083.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/img/dashboard02.jpg" />
+         </image>
+      </ImageView>
+      <AnchorPane opacity="0.17" prefHeight="718.0" prefWidth="1077.0" style="-fx-background-color: #273c75;" />
+      <Text fill="#172a51" layoutX="347.0" layoutY="67.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Income Report" textAlignment="CENTER" wrappingWidth="382.646484375">
+         <font>
+            <Font name="Eras Demi ITC" size="32.0" />
+         </font>
+      </Text>
+      <TableView fx:id="tblIncome" layoutX="52.0" layoutY="120.0" prefHeight="571.0" prefWidth="514.0">
+        <columns>
+          <TableColumn fx:id="colPaymentId" prefWidth="114.0" text="Patment Id" />
+          <TableColumn fx:id="colDate" prefWidth="96.0" text="Date" />
+            <TableColumn fx:id="colMonth" prefWidth="103.0" text="Month" />
+            <TableColumn fx:id="colYear" prefWidth="95.0" text="year" />
+            <TableColumn fx:id="colAmount" prefWidth="105.0" text="Amount" />
+        </columns>
+      </TableView>
+      <AnchorPane fx:id="paneOne" layoutX="634.0" layoutY="130.0" prefHeight="151.0" prefWidth="373.0" style="-fx-background-color: #ecf0f1; -fx-effect: dropshadow(three-pass-box, grey, 30,0, 0, 0); -fx-background-radius: 10;">
+         <children>
+            <Text fill="#636e72" layoutX="12.0" layoutY="21.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Daily Income" wrappingWidth="113.13671875">
+               <font>
+                  <Font name="Calibri Bold" size="16.0" />
+               </font>
+            </Text>
+            <Text fx:id="txtDate" layoutX="14.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Text>
+            <Text fx:id="txtDailyIncome" fill="#38ada9" layoutX="76.0" layoutY="111.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" textAlignment="CENTER" wrappingWidth="221.0498046875">
+               <font>
+                  <Font name="System Bold" size="42.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="paneOne1" layoutX="634.0" layoutY="526.0" prefHeight="151.0" prefWidth="373.0" style="-fx-background-color: #ecf0f1; -fx-effect: dropshadow(three-pass-box, grey, 30,0, 0, 0); -fx-background-radius: 10;">
+         <children>
+            <Text fill="#636e72" layoutX="12.0" layoutY="21.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Annual Income" wrappingWidth="113.13671875">
+               <font>
+                  <Font name="Calibri Bold" size="16.0" />
+               </font>
+            </Text>
+            <Text fx:id="txtYear" layoutX="12.0" layoutY="62.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Text>
+            <Text fx:id="txtAnnualIncome" fill="#38ada9" layoutX="76.0" layoutY="114.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" textAlignment="CENTER" wrappingWidth="221.0498046875">
+               <font>
+                  <Font name="System Bold" size="42.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="paneOne11" layoutX="634.0" layoutY="328.0" prefHeight="151.0" prefWidth="373.0" style="-fx-background-color: #ecf0f1; -fx-effect: dropshadow(three-pass-box, grey, 30,0, 0, 0); -fx-background-radius: 10;">
+         <children>
+            <Text fill="#636e72" layoutX="12.0" layoutY="21.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Monthly Income" wrappingWidth="113.13671875">
+               <font>
+                  <Font name="Calibri Bold" size="16.0" />
+               </font>
+            </Text>
+            <Text fx:id="txtMonth" layoutX="12.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Text>
+            <Text fx:id="txtMonthlyIncome" fill="#38ada9" layoutX="76.0" layoutY="114.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" textAlignment="CENTER" wrappingWidth="221.0498046875">
+               <font>
+                  <Font name="System Bold" size="42.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+      <JFXButton layoutX="868.0" layoutY="41.0" onAction="#btnGenerateReportOnAction" style="-fx-background-color: #0097e6; -fx-border-color: #273c75; -fx-background-radius: 8; -fx-border-radius: 8;" text="Generate Report" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

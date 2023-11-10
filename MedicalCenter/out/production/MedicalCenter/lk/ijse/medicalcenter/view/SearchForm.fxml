@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="pane" prefHeight="718.0" prefWidth="782.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.medicalcenter.controller.SearchFormController">
+   <children>
+      <ImageView fitHeight="718.0" fitWidth="782.0" layoutX="3.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/img/test01.jpg" />
+         </image>
+      </ImageView>
+      <AnchorPane opacity="0.33" prefHeight="718.0" prefWidth="782.0" style="-fx-background-color: #40739e;" />
+      <AnchorPane layoutX="134.0" layoutY="75.0" prefHeight="568.0" prefWidth="515.0" style="-fx-background-color: #f5f6fa; -fx-effect: dropshadow(three-pass-box, grey, 20,0, 0, 0); -fx-background-radius: 10;">
+         <children>
+            <Text fill="#636e72" layoutX="33.0" layoutY="119.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Id " wrappingWidth="150.13671875">
+               <font>
+                  <Font name="Calibri" size="21.0" />
+               </font>
+            </Text>
+            <Text fill="#172a51" layoutX="80.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Search Form" textAlignment="CENTER" wrappingWidth="382.646484375">
+               <font>
+                  <Font name="Eras Demi ITC" size="32.0" />
+               </font>
+            </Text>
+            <Text fill="#636e72" layoutX="33.0" layoutY="178.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name" wrappingWidth="139.13671875">
+               <font>
+                  <Font name="Calibri" size="21.0" />
+               </font>
+            </Text>
+            <Text fill="#636e72" layoutX="33.0" layoutY="399.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Contact" wrappingWidth="150.1367223262787">
+               <font>
+                  <Font name="Calibri" size="21.0" />
+               </font>
+            </Text>
+            <Text fill="#636e72" layoutX="33.0" layoutY="455.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Date Of Birth" wrappingWidth="150.1367223262787">
+               <font>
+                  <Font name="Calibri" size="21.0" />
+               </font>
+            </Text>
+            <Text fill="#636e72" layoutX="33.0" layoutY="289.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Address" wrappingWidth="139.13671255111694">
+               <font>
+                  <Font name="Calibri" size="21.0" />
+               </font>
+            </Text>
+            <Text fill="#636e72" layoutX="33.0" layoutY="343.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Gender" wrappingWidth="139.13671255111694">
+               <font>
+                  <Font name="Calibri" size="21.0" />
+               </font>
+            </Text>
+            <Text fill="#636e72" layoutX="202.0" layoutY="119.0" strokeType="OUTSIDE" strokeWidth="0.0" text=":" wrappingWidth="9.13671875">
+               <font>
+                  <Font name="Calibri" size="21.0" />
+               </font>
+            </Text>
+            <Text fill="#636e72" layoutX="202.0" layoutY="178.0" strokeType="OUTSIDE" strokeWidth="0.0" text=":" wrappingWidth="9.13671875">
+               <font>
+                  <Font name="Calibri" size="21.0" />
+               </font>
+            </Text>
+            <Text fill="#636e72" layoutX="202.0" layoutY="289.0" strokeType="OUTSIDE" strokeWidth="0.0" text=":" wrappingWidth="9.13671875">
+               <font>
+                  <Font name="Calibri" size="21.0" />
+               </font>
+            </Text>
+            <Text fill="#636e72" layoutX="202.0" layoutY="342.0" strokeType="OUTSIDE" strokeWidth="0.0" text=":" wrappingWidth="9.13671875">
+               <font>
+                  <Font name="Calibri" size="21.0" />
+               </font>
+            </Text>
+            <Text fill="#636e72" layoutX="202.0" layoutY="399.0" strokeType="OUTSIDE" strokeWidth="0.0" text=":" wrappingWidth="9.13671875">
+               <font>
+                  <Font name="Calibri" size="21.0" />
+               </font>
+            </Text>
+            <Text fill="#636e72" layoutX="202.0" layoutY="455.0" strokeType="OUTSIDE" strokeWidth="0.0" text=":" wrappingWidth="9.13671875">
+               <font>
+                  <Font name="Calibri" size="21.0" />
+               </font>
+            </Text>
+            <JFXTextField fx:id="txtId" layoutX="236.0" layoutY="101.0" prefHeight="25.0" prefWidth="191.0" />
+            <JFXTextField fx:id="txtName" editable="false" layoutX="236.0" layoutY="158.0" prefHeight="25.0" prefWidth="238.0" />
+            <JFXTextField fx:id="txtAddress" editable="false" layoutX="236.0" layoutY="269.0" prefHeight="25.0" prefWidth="238.0" />
+            <JFXTextField fx:id="txtContact" editable="false" layoutX="236.0" layoutY="379.0" prefHeight="25.0" prefWidth="238.0" />
+            <JFXTextField fx:id="txtDob" editable="false" layoutX="236.0" layoutY="435.0" prefHeight="25.0" prefWidth="238.0" />
+            <Text fill="#636e72" layoutX="33.0" layoutY="511.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Company" wrappingWidth="139.13672100752592">
+               <font>
+                  <Font name="Calibri" size="21.0" />
+               </font>
+            </Text>
+            <Text fill="#636e72" layoutX="202.0" layoutY="509.0" strokeType="OUTSIDE" strokeWidth="0.0" text=":" wrappingWidth="9.13671875">
+               <font>
+                  <Font name="Calibri" size="21.0" />
+               </font>
+            </Text>
+            <JFXTextField fx:id="txtCompany" editable="false" layoutX="236.0" layoutY="490.0" prefHeight="25.0" prefWidth="238.0" />
+            <ImageView fitHeight="38.0" fitWidth="42.0" layoutX="444.0" layoutY="95.0" onMouseClicked="#btnEnterOnAction" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/logo/Enterkey.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <JFXTextField fx:id="txtGender" editable="false" layoutX="236.0" layoutY="324.0" prefHeight="25.0" prefWidth="238.0" />
+            <Text fill="#636e72" layoutX="33.0" layoutY="233.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Specialty" wrappingWidth="139.13671875">
+               <font>
+                  <Font name="Calibri" size="21.0" />
+               </font>
+            </Text>
+            <Text fill="#636e72" layoutX="202.0" layoutY="233.0" strokeType="OUTSIDE" strokeWidth="0.0" text=":" wrappingWidth="9.13671875">
+               <font>
+                  <Font name="Calibri" size="21.0" />
+               </font>
+            </Text>
+            <JFXTextField fx:id="txtSpecialty" editable="false" layoutX="236.0" layoutY="213.0" prefHeight="25.0" prefWidth="238.0" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

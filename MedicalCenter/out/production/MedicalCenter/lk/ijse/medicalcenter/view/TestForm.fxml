@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="pane" prefHeight="718.0" prefWidth="1077.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.medicalcenter.controller.TestFormController">
+   <children>
+      <ImageView fitHeight="718.0" fitWidth="1139.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/img/test.jpg" />
+         </image>
+      </ImageView>
+      <AnchorPane opacity="0.09" prefHeight="718.0" prefWidth="1077.0" style="-fx-background-color: #30336b;" />
+      <AnchorPane layoutX="211.0" layoutY="94.0" prefHeight="535.0" prefWidth="659.0" style="-fx-background-color: #f5f6fa; -fx-effect: dropshadow(three-pass-box, grey, 20,0, 0, 0); -fx-background-radius: 10;">
+         <children>
+            <Text fill="#636e72" layoutX="31.0" layoutY="387.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Description" wrappingWidth="115.13669934868813">
+               <font>
+                  <Font name="Calibri" size="21.0" />
+               </font>
+            </Text>
+            <Text fill="#172a51" layoutX="147.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Payment for Testing" textAlignment="CENTER" wrappingWidth="382.646484375">
+               <font>
+                  <Font name="Eras Demi ITC" size="32.0" />
+               </font>
+            </Text>
+            <Text fill="#636e72" layoutX="152.0" layoutY="386.0" strokeType="OUTSIDE" strokeWidth="0.0" text=":" wrappingWidth="9.13671875">
+               <font>
+                  <Font name="Calibri" size="21.0" />
+               </font>
+            </Text>
+            <Text fill="#636e72" layoutX="31.0" layoutY="168.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Test Id" wrappingWidth="69.13671875">
+               <font>
+                  <Font name="Calibri" size="21.0" />
+               </font>
+            </Text>
+            <Text fill="#636e72" layoutX="132.0" layoutY="166.0" strokeType="OUTSIDE" strokeWidth="0.0" text=":" wrappingWidth="9.13671875">
+               <font>
+                  <Font name="Calibri" size="21.0" />
+               </font>
+            </Text>
+            <JFXComboBox fx:id="cmbDescription" layoutX="171.0" layoutY="369.0" onAction="#cmbDescriptionOnAction" prefHeight="25.0" prefWidth="238.0" promptText="Blood /  Urine" />
+            <Text fill="#636e72" layoutX="31.0" layoutY="117.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Payment Id :" wrappingWidth="115.13671875">
+               <font>
+                  <Font name="Calibri" size="21.0" />
+               </font>
+            </Text>
+            <Text fx:id="txtPaymentId" layoutX="158.0" layoutY="116.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="150.1367223262787">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Text>
+            <Text fill="#636e72" layoutX="410.0" layoutY="115.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Date :" wrappingWidth="53.13671875">
+               <font>
+                  <Font name="Calibri" size="21.0" />
+               </font>
+            </Text>
+            <Text fx:id="txtDate" layoutX="473.0" layoutY="115.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="175.99999299645424">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Text>
+            <Text fill="#636e72" layoutX="31.0" layoutY="275.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Contact No :" wrappingWidth="115.13669934868813">
+               <font>
+                  <Font name="Calibri" size="21.0" />
+               </font>
+            </Text>
+            <ImageView fitHeight="38.0" fitWidth="44.0" layoutX="372.0" layoutY="246.0" onMouseClicked="#btnEnterOnAction" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/logo/Enterkey.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <Text fill="#636e72" layoutX="31.0" layoutY="330.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Patient Name :" wrappingWidth="132.13670432567596">
+               <font>
+                  <Font name="Calibri" size="21.0" />
+               </font>
+            </Text>
+            <Text fx:id="txtPatientName" layoutX="171.0" layoutY="332.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="197.1367223262787">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Text>
+            <Text fx:id="txtTestId" layoutX="158.0" layoutY="167.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="150.1367223262787">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Text>
+            <Text fill="#636e72" layoutX="31.0" layoutY="221.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nurse Id" wrappingWidth="79.13671875">
+               <font>
+                  <Font name="Calibri" size="21.0" />
+               </font>
+            </Text>
+            <Text fill="#636e72" layoutX="132.0" layoutY="219.0" strokeType="OUTSIDE" strokeWidth="0.0" text=":" wrappingWidth="9.13671875">
+               <font>
+                  <Font name="Calibri" size="21.0" />
+               </font>
+            </Text>
+            <Text fx:id="txtNurseId" layoutX="160.0" layoutY="220.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="150.1367223262787">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Text>
+            <JFXButton fx:id="btnIssueBill" buttonType="RAISED" layoutX="506.0" layoutY="469.0" onAction="#btnIssueBillOnAction" prefHeight="25.0" prefWidth="115.0" style="-fx-background-color: #079992;" text="Issue Bill" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="System Bold" size="19.0" />
+               </font>
+            </JFXButton>
+            <JFXTextField fx:id="txtContactNo" layoutX="158.0" layoutY="257.0" prefHeight="25.0" prefWidth="197.0" promptText="0XXXXXXXXX" />
+            <Text fill="#636e72" layoutX="32.0" layoutY="444.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total Fee" wrappingWidth="93.13669934868813">
+               <font>
+                  <Font name="Calibri" size="21.0" />
+               </font>
+            </Text>
+            <JFXTextField fx:id="txtTotalFee" layoutX="171.0" layoutY="424.0" prefHeight="25.0" prefWidth="238.0" />
+            <Text fill="#636e72" layoutX="150.0" layoutY="441.0" strokeType="OUTSIDE" strokeWidth="0.0" text=":" wrappingWidth="9.13671875">
+               <font>
+                  <Font name="Calibri" size="21.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

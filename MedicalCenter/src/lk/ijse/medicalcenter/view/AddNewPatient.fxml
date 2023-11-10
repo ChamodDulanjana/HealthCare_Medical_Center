@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="pane" prefHeight="718.0" prefWidth="1077.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.medicalcenter.controller.AddNewPatientController">
+   <children>
+      <ImageView fitHeight="718.0" fitWidth="1108.0" opacity="0.73" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/img/ManageMedicine.jpg" />
+         </image>
+      </ImageView>
+      <AnchorPane opacity="0.33" prefHeight="718.0" prefWidth="1077.0" style="-fx-background-color: #40739e;" />
+      <AnchorPane layoutX="280.0" layoutY="102.0" prefHeight="514.0" prefWidth="517.0" style="-fx-background-color: #f5f6fa; -fx-effect: dropshadow(three-pass-box, grey, 20,0, 0, 0); -fx-background-radius: 10;">
+         <children>
+            <Text fill="#636e72" layoutX="33.0" layoutY="125.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Id " wrappingWidth="150.13671875">
+               <font>
+                  <Font name="Calibri" size="21.0" />
+               </font>
+            </Text>
+            <Text fill="#172a51" layoutX="80.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Add New Patient" textAlignment="CENTER" wrappingWidth="382.646484375">
+               <font>
+                  <Font name="Eras Demi ITC" size="32.0" />
+               </font>
+            </Text>
+            <JFXComboBox fx:id="cmbGender" layoutX="236.0" layoutY="269.0" prefHeight="25.0" prefWidth="238.0" promptText="Male / Female" />
+            <Text fill="#636e72" layoutX="33.0" layoutY="180.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name" wrappingWidth="139.13671875">
+               <font>
+                  <Font name="Calibri" size="21.0" />
+               </font>
+            </Text>
+            <Text fill="#636e72" layoutX="33.0" layoutY="345.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Contact" wrappingWidth="150.1367223262787">
+               <font>
+                  <Font name="Calibri" size="21.0" />
+               </font>
+            </Text>
+            <Text fill="#636e72" layoutX="33.0" layoutY="401.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Date Of Birth" wrappingWidth="150.1367223262787">
+               <font>
+                  <Font name="Calibri" size="21.0" />
+               </font>
+            </Text>
+            <Text fill="#636e72" layoutX="33.0" layoutY="235.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Address" wrappingWidth="139.13671255111694">
+               <font>
+                  <Font name="Calibri" size="21.0" />
+               </font>
+            </Text>
+            <Text fill="#636e72" layoutX="33.0" layoutY="289.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Gender" wrappingWidth="139.13671255111694">
+               <font>
+                  <Font name="Calibri" size="21.0" />
+               </font>
+            </Text>
+            <Text fill="#636e72" layoutX="202.0" layoutY="125.0" strokeType="OUTSIDE" strokeWidth="0.0" text=":" wrappingWidth="9.13671875">
+               <font>
+                  <Font name="Calibri" size="21.0" />
+               </font>
+            </Text>
+            <Text fill="#636e72" layoutX="202.0" layoutY="180.0" strokeType="OUTSIDE" strokeWidth="0.0" text=":" wrappingWidth="9.13671875">
+               <font>
+                  <Font name="Calibri" size="21.0" />
+               </font>
+            </Text>
+            <Text fill="#636e72" layoutX="202.0" layoutY="235.0" strokeType="OUTSIDE" strokeWidth="0.0" text=":" wrappingWidth="9.13671875">
+               <font>
+                  <Font name="Calibri" size="21.0" />
+               </font>
+            </Text>
+            <Text fill="#636e72" layoutX="202.0" layoutY="289.0" strokeType="OUTSIDE" strokeWidth="0.0" text=":" wrappingWidth="9.13671875">
+               <font>
+                  <Font name="Calibri" size="21.0" />
+               </font>
+            </Text>
+            <Text fill="#636e72" layoutX="202.0" layoutY="345.0" strokeType="OUTSIDE" strokeWidth="0.0" text=":" wrappingWidth="9.13671875">
+               <font>
+                  <Font name="Calibri" size="21.0" />
+               </font>
+            </Text>
+            <Text fill="#636e72" layoutX="202.0" layoutY="401.0" strokeType="OUTSIDE" strokeWidth="0.0" text=":" wrappingWidth="9.13671875">
+               <font>
+                  <Font name="Calibri" size="21.0" />
+               </font>
+            </Text>
+            <JFXTextField fx:id="txtId" editable="false" layoutX="236.0" layoutY="106.0" prefHeight="25.0" prefWidth="238.0" />
+            <JFXTextField fx:id="txtName" layoutX="236.0" layoutY="161.0" prefHeight="25.0" prefWidth="238.0" />
+            <JFXTextField fx:id="txtAddress" layoutX="236.0" layoutY="216.0" prefHeight="25.0" prefWidth="238.0" />
+            <JFXTextField fx:id="txtContact" layoutX="236.0" layoutY="326.0" prefHeight="25.0" prefWidth="238.0" promptText="0XXXXXXXXX" />
+            <JFXTextField fx:id="txtDob" layoutX="236.0" layoutY="382.0" prefHeight="25.0" prefWidth="238.0" promptText="yyyy/mm/dd" />
+            <JFXButton fx:id="btnAdd" buttonType="RAISED" layoutX="337.0" layoutY="446.0" onAction="#btnAddOnAction" prefHeight="42.0" prefWidth="139.0" style="-fx-background-color: #273c75;" text="Add Patient" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="System Bold" size="19.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

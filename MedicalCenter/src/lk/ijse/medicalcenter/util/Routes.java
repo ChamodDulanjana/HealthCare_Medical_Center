@@ -1,0 +1,32 @@
+package lk.ijse.medicalcenter.util;
+
+public enum Routes {
+    Main_Form,
+    Sign_In,
+    Sign_Up,
+    Receptionist_Form,
+    Dashboard,
+    Appointment_For_Channeling,
+    Add_Form,
+    View_Appointment,
+    Admin_Form,
+    Manage_Form,
+    Manage_Medicine_Store,
+    Buy_Medicines,
+    Update_Form,
+    Delete_Form,
+    View_Detail_Form,
+    Add_Medicine_Form,
+    Search_Medicine_Form,
+    Update_Medicine_Form,
+    Delete_Medicine_Form,
+    View_Medicine_Form,
+    Search_Form,
+    Issue_Bill,
+    Test_Form,
+    Manage_Form_Slider,
+    Manage_Medicine_Store_Slider,
+    Add_New_Patient,
+    View_Income_Reports,
+    Nurse_Form
+}

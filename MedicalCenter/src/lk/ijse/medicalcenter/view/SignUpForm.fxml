@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="pane" prefHeight="718.0" prefWidth="1370.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.medicalcenter.controller.SignUpFormController">
+   <children>
+      <JFXComboBox fx:id="cmbRole" layoutX="871.0" layoutY="197.0" prefHeight="32.0" prefWidth="346.0" promptText="Select the Role">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXComboBox>
+      <AnchorPane layoutX="970.0" layoutY="520.0" prefHeight="32.0" prefWidth="149.0">
+         <children>
+            <Text fill="#7f8c8d" layoutY="13.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Already a member?" wrappingWidth="115.13671875" />
+            <Text fill="#2867cd" layoutX="111.0" layoutY="13.0" onMouseClicked="#signInOnAction" strokeType="OUTSIDE" strokeWidth="0.0" text="Sign in">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Text>
+         </children>
+      </AnchorPane>
+      <Text fill="#172a51" layoutX="867.0" layoutY="99.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Create an account" textAlignment="CENTER" wrappingWidth="280.646484375">
+         <font>
+            <Font name="Eras Demi ITC" size="32.0" />
+         </font>
+      </Text>
+      <Text fill="#718093" layoutX="871.0" layoutY="136.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Make sure you have a System id.If do you haven't a system id please contact the administrator." wrappingWidth="338.34765625">
+         <font>
+            <Font name="Calibri" size="15.0" />
+         </font>
+      </Text>
+      <JFXTextField fx:id="txtEmpId" layoutX="871.0" layoutY="263.0" prefHeight="25.0" prefWidth="346.0" promptText="System Id" />
+      <JFXPasswordField fx:id="txtHidePassWord" layoutX="871.0" layoutY="389.0" prefHeight="25.0" prefWidth="346.0" promptText="Password" />
+      <Button layoutX="871.0" layoutY="463.0" mnemonicParsing="false" onAction="#btnSignUpOnAction" prefHeight="30.0" prefWidth="346.0" style="-fx-background-color: #273c75; -fx-background-radius: 5;" text="Sign Up" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <JFXTextField fx:id="txtUserName" layoutX="871.0" layoutY="323.0" prefHeight="25.0" prefWidth="346.0" promptText="Username" />
+      <ImageView fitHeight="769.0" fitWidth="747.0" layoutX="-25.0" layoutY="-31.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/img/signUp.png" />
+         </image>
+      </ImageView>
+      <AnchorPane opacity="0.12" prefHeight="718.0" prefWidth="723.0" style="-fx-background-color: #192a56;" />
+      <ImageView fx:id="imgShow" fitHeight="24.0" fitWidth="24.0" layoutX="1193.0" layoutY="390.0" onMouseClicked="#imgShowOnAction" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/logo/show.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <JFXTextField fx:id="txtShowPassword" layoutX="871.0" layoutY="389.0" prefHeight="25.0" prefWidth="346.0" promptText="Password" />
+      <ImageView fx:id="imgHide" fitHeight="24.0" fitWidth="24.0" layoutX="1193.0" layoutY="390.0" onMouseClicked="#imgHideOnAction" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/logo/hide.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+   </children>
+</AnchorPane>

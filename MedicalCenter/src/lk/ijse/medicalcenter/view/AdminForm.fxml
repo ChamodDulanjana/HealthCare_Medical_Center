@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="fullPane" prefHeight="718.0" prefWidth="1370.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.medicalcenter.controller.AdminFormController">
+   <children>
+      <AnchorPane fx:id="paneTwo" layoutX="295.0" prefHeight="718.0" prefWidth="1077.0">
+         <children>
+            <AnchorPane prefHeight="718.0" prefWidth="1077.0">
+               <children>
+                  <ImageView fitHeight="718.0" fitWidth="1077.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/img/dashboard02.jpg" />
+                     </image>
+                  </ImageView>
+                  <AnchorPane fx:id="paneOne" layoutX="85.0" layoutY="56.0" prefHeight="229.0" prefWidth="337.0" style="-fx-background-color: #ecf0f1; -fx-effect: dropshadow(three-pass-box, grey, 30,0, 0, 0); -fx-background-radius: 10;">
+                     <children>
+                        <ImageView fitHeight="85.0" fitWidth="86.0" layoutX="126.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../assets/logo/user.png" />
+                           </image>
+                        </ImageView>
+                        <Text fill="#636e72" layoutX="24.0" layoutY="133.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Id :" wrappingWidth="27.13671875">
+                           <font>
+                              <Font name="Calibri Bold" size="16.0" />
+                           </font>
+                        </Text>
+                        <Text fill="#636e72" layoutX="22.0" layoutY="158.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name  :" wrappingWidth="57.13671875">
+                           <font>
+                              <Font name="Calibri Bold" size="16.0" />
+                           </font>
+                        </Text>
+                        <Text fill="#636e72" layoutX="22.0" layoutY="183.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Role :" wrappingWidth="57.13671875">
+                           <font>
+                              <Font name="Calibri Bold" size="16.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="txtId" layoutX="51.0" layoutY="132.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="192.0" />
+                        <Text fx:id="txtName" layoutX="79.0" layoutY="157.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="214.0" />
+                        <Text fx:id="txtRole" layoutX="66.0" layoutY="182.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="221.0" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="paneOne1" layoutX="574.0" layoutY="56.0" prefHeight="229.0" prefWidth="409.0" style="-fx-background-color: #ecf0f1; -fx-effect: dropshadow(three-pass-box, grey, 30,0, 0, 0); -fx-background-radius: 10;">
+                     <children>
+                        <Text layoutX="14.0" layoutY="28.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Date &amp; Time" wrappingWidth="134.99999278783798">
+                           <font>
+                              <Font name="Calibri Bold" size="18.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="txtDate" fill="#757d80" layoutX="89.0" layoutY="87.0" strokeType="OUTSIDE" strokeWidth="0.0" text="2022-10-10" textAlignment="CENTER" wrappingWidth="231.99999278783798">
+                           <font>
+                              <Font name="Calibri" size="30.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="txtTime" fill="#757d80" layoutX="68.0" layoutY="187.0" strokeType="OUTSIDE" strokeWidth="0.0" text="10.39" textAlignment="CENTER" wrappingWidth="274.999992787838">
+                           <font>
+                              <Font name="Calibri" size="96.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="paneOne11" layoutX="85.0" layoutY="382.0" prefHeight="263.0" prefWidth="409.0" style="-fx-background-color: #ecf0f1; -fx-effect: dropshadow(three-pass-box, grey, 30,0, 0, 0); -fx-background-radius: 10;">
+                     <children>
+                        <Text layoutX="19.0" layoutY="24.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Doctors List" wrappingWidth="134.99999278783798">
+                           <font>
+                              <Font name="Calibri Bold" size="18.0" />
+                           </font>
+                        </Text>
+                        <TableView fx:id="tblDoctor" layoutX="19.0" layoutY="40.0" prefHeight="199.0" prefWidth="372.0">
+                           <columns>
+                              <TableColumn fx:id="colDoctorId" prefWidth="106.0" text="Id" />
+                              <TableColumn fx:id="colDoctorName" prefWidth="265.0" text="Name" />
+                           </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="paneOne111" layoutX="574.0" layoutY="382.0" prefHeight="263.0" prefWidth="409.0" style="-fx-background-color: #ecf0f1; -fx-effect: dropshadow(three-pass-box, grey, 30,0, 0, 0); -fx-background-radius: 10;">
+                     <children>
+                        <Text layoutX="19.0" layoutY="24.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nurses List" wrappingWidth="134.99999278783798">
+                           <font>
+                              <Font name="Calibri Bold" size="18.0" />
+                           </font>
+                        </Text>
+                        <TableView fx:id="tblNurse" layoutX="19.0" layoutY="40.0" prefHeight="199.0" prefWidth="372.0">
+                           <columns>
+                              <TableColumn fx:id="colNurseId" prefWidth="106.0" text="Id" />
+                              <TableColumn fx:id="colNurseName" prefWidth="265.0" text="Name" />
+                           </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+         </children></AnchorPane>
+      <AnchorPane prefHeight="718.0" prefWidth="295.0" style="-fx-background-color: #192a56; -fx-effect: dropshadow(three-pass-box, grey, 16,0, 0, 0);">
+         <children>
+            <Text fill="WHITE" layoutX="113.0" layoutY="66.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Healthcare Medical Center" textAlignment="CENTER" wrappingWidth="145.646484375">
+               <font>
+                  <Font name="Eras Demi ITC" size="20.0" />
+               </font>
+            </Text>
+            <AnchorPane layoutX="33.0" layoutY="35.0" opacity="0.0" prefHeight="58.0" prefWidth="58.0" style="-fx-background-color: #ecf0f1;" visible="false" />
+            <JFXButton alignment="BASELINE_LEFT" layoutY="169.0" onAction="#paneDashboardOnAction" prefHeight="46.0" prefWidth="295.0" style="-fx-border-radius: 4; -fx-background-radius: 5;" styleClass="sidebarItem" stylesheets="@../value/Palet.Css.css" text="    Dashboard" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton alignment="BASELINE_LEFT" layoutY="215.0" onAction="#paneManageOnAction" prefHeight="46.0" prefWidth="295.0" style="-fx-border-radius: 4; -fx-background-radius: 5;" styleClass="sidebarItem" stylesheets="@../value/Palet.Css.css" text="    Manage" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton alignment="BASELINE_LEFT" layoutY="261.0" onAction="#paneManageMedicineStoreOnAction" prefHeight="46.0" prefWidth="295.0" style="-fx-border-radius: 4; -fx-background-radius: 5;" styleClass="sidebarItem" stylesheets="@../value/Palet.Css.css" text="    Manage Medicine Store" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton alignment="CENTER" layoutY="604.0" onAction="#paneLogOutOnAction" prefHeight="46.0" prefWidth="295.0" style="-fx-border-radius: 3; -fx-background-radius: 3;" styleClass="sidebarItem" stylesheets="@../value/Logout.Css.css" text="Log Out" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <ImageView fitHeight="26.0" fitWidth="25.0" layoutX="69.0" layoutY="614.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/logo/logout01.png" />
+               </image>
+            </ImageView>
+            <ImageView layoutX="30.0" layoutY="32.0">
+               <image>
+                  <Image url="@../assets/logo/hospital.png" />
+               </image>
+            </ImageView>
+            <JFXButton alignment="BASELINE_LEFT" layoutY="307.0" onAction="#paneBuyMedicineOnAction" prefHeight="46.0" prefWidth="295.0" style="-fx-border-radius: 4; -fx-background-radius: 5;" styleClass="sidebarItem" stylesheets="@../value/Palet.Css.css" text="    Buy Medicines" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton alignment="BASELINE_LEFT" layoutY="353.0" onAction="#paneViewIncomeReportsOnAction" prefHeight="46.0" prefWidth="295.0" style="-fx-border-radius: 4; -fx-background-radius: 5;" styleClass="sidebarItem" stylesheets="@../value/Palet.Css.css" text="    View Income Reports" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton alignment="BASELINE_LEFT" layoutY="399.0" onAction="#btnViewMedicineExpensesOnAction" prefHeight="46.0" prefWidth="295.0" style="-fx-border-radius: 4; -fx-background-radius: 5;" styleClass="sidebarItem" stylesheets="@../value/Palet.Css.css" text="    View Medicine Expenses" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="pane" prefHeight="718.0" prefWidth="1077.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.medicalcenter.controller.ManageMedicineStoreFormController">
+   <children>
+      <ImageView fitHeight="749.0" fitWidth="1077.0" opacity="0.89" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/img/ManageMedicine.jpg" />
+         </image>
+      </ImageView>
+      <AnchorPane opacity="0.12" prefHeight="718.0" prefWidth="1077.0" style="-fx-background-color: #6a89cc;" />
+      <AnchorPane layoutX="62.0" layoutY="43.0" onMouseClicked="#paneAddNewMedicineOnAction" opacity="0.79" prefHeight="198.0" prefWidth="285.0" style="-fx-background-color: #6a89cc; -fx-effect: dropshadow(three-pass-box, grey, 30,0, 0, 0); -fx-background-radius: 20; -fx-border-radius: 20;">
+         <children>
+            <Text fill="WHITE" layoutX="75.0" layoutY="87.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Add New Medicine" textAlignment="CENTER" wrappingWidth="135.13671875">
+               <font>
+                  <Font name="Calibri Bold" size="32.0" />
+               </font>
+            </Text>
+         </children>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </AnchorPane>
+      <AnchorPane layoutX="396.0" layoutY="260.0" onMouseClicked="#paneViewMedicineDetailsOnAction" opacity="0.79" prefHeight="198.0" prefWidth="285.0" style="-fx-background-color: #6a89cc; -fx-effect: dropshadow(three-pass-box, grey, 30,0, 0, 0); -fx-background-radius: 20; -fx-border-radius: 20;">
+         <children>
+            <Text fill="WHITE" layoutX="40.0" layoutY="87.0" strokeType="OUTSIDE" strokeWidth="0.0" text="View Medicine Details" textAlignment="CENTER" wrappingWidth="205.13671875">
+               <font>
+                  <Font name="Calibri Bold" size="32.0" />
+               </font>
+            </Text>
+         </children>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </AnchorPane>
+      <AnchorPane layoutX="729.0" layoutY="475.0" onMouseClicked="#paneDeleteMedicineOnAction" opacity="0.79" prefHeight="198.0" prefWidth="285.0" style="-fx-background-color: #6a89cc; -fx-effect: dropshadow(three-pass-box, grey, 30,0, 0, 0); -fx-background-radius: 20; -fx-border-radius: 20;">
+         <children>
+            <Text fill="WHITE" layoutX="31.0" layoutY="87.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Delete Medicine Detail" textAlignment="CENTER" wrappingWidth="222.13673539459705">
+               <font>
+                  <Font name="Calibri Bold" size="32.0" />
+               </font>
+            </Text>
+         </children>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </AnchorPane>
+      <AnchorPane layoutX="729.0" layoutY="43.0" onMouseClicked="#paneUpdateMedicineOnAction" opacity="0.79" prefHeight="198.0" prefWidth="285.0" style="-fx-background-color: #6a89cc; -fx-effect: dropshadow(three-pass-box, grey, 30,0, 0, 0); -fx-background-radius: 20; -fx-border-radius: 20;">
+         <children>
+            <Text fill="WHITE" layoutX="26.0" layoutY="87.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Update Medicine Detail" textAlignment="CENTER" wrappingWidth="232.13671875">
+               <font>
+                  <Font name="Calibri Bold" size="32.0" />
+               </font>
+            </Text>
+         </children>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </AnchorPane>
+      <AnchorPane layoutX="62.0" layoutY="475.0" onMouseClicked="#paneSearchMedicineOnAction" opacity="0.79" prefHeight="198.0" prefWidth="285.0" style="-fx-background-color: #6a89cc; -fx-effect: dropshadow(three-pass-box, grey, 30,0, 0, 0); -fx-background-radius: 20; -fx-border-radius: 20;">
+         <children>
+            <Text fill="WHITE" layoutX="31.0" layoutY="87.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Search Medicine Detail" textAlignment="CENTER" wrappingWidth="222.13673539459705">
+               <font>
+                  <Font name="Calibri Bold" size="32.0" />
+               </font>
+            </Text>
+         </children>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </AnchorPane>
+   </children>
+</AnchorPane>
