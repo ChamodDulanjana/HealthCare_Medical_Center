@@ -90,6 +90,7 @@ public class BuyMedicineFormController {
         } catch (SQLException | ClassNotFoundException e) {
             e.printStackTrace();
         }
+
     }
 
     private void loadNextMedicinePaymentId() {
@@ -175,6 +176,7 @@ public class BuyMedicineFormController {
                 setNetTotal();
             }
         });
+
     }
 
     public void btnPlaceOrderOnAction(ActionEvent actionEvent) {

@@ -81,9 +81,7 @@ public class ReceptionistFormController {
             ArrayList<Nurse> nurseArrayList = NurseModel.getNursesIdAndName();
             ObservableList<Nurse> nurseObservableList = FXCollections.observableArrayList(nurseArrayList);
             tblNurse.setItems(nurseObservableList);
-
             setDataToTableNurseColumns();
-
         } catch (SQLException | ClassNotFoundException e) {
             e.printStackTrace();
         }
@@ -111,4 +109,5 @@ public class ReceptionistFormController {
         colDoctorId.setCellValueFactory(new PropertyValueFactory<>("doctorId"));
         colDoctorName.setCellValueFactory(new PropertyValueFactory<>("name"));
     }
+
 }

@@ -104,6 +104,7 @@ public class AddNewMedicineFormController {
         } catch (SQLException | ClassNotFoundException e) {
             e.printStackTrace();
         }
+
     }
 
     private void clearField() {
@@ -113,4 +114,6 @@ public class AddNewMedicineFormController {
         txtUnitPrice.clear();
         txtQtyOnHand.clear();
     }
+
+
 }
